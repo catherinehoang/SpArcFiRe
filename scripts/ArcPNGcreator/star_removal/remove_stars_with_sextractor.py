@@ -5,8 +5,6 @@ Created on Wed Feb 27 13:51:57 2013
 @author: darren
 """
 
-from __future__ import division
-
 import logging
 #import matplotlib.cm as cm
 #import matplotlib.pyplot as plt
@@ -374,7 +372,7 @@ def create_star_mask_ctrcontig(seg_img, ctr_r, ctr_c):
         maxlbl = stats.mode(ccs[ccs != 0])[0][0]
         assert maxlbl != 0
         ctrlbl = maxlbl
-        print maxlbl
+        print(maxlbl)
     star_mask = (ccs != ctrlbl)
     return star_mask
         
@@ -383,7 +381,7 @@ def create_star_mask_ctrcontig(seg_img, ctr_r, ctr_c):
 # /mnt/share/in /mnt/share/out
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print "usage: remove_stars_with_sextractor in_dir out_dir"
+        print("usage: remove_stars_with_sextractor in_dir out_dir")
     
     in_dirpath = sys.argv[1]
     out_dirpath = sys.argv[2]
